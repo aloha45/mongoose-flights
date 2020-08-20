@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Mongoose Flights</title>
+</head>
+<body>
+    <h2>Enter a Flight Search</h2>
+        <form action="/flights" method="POST">
+        <label>Airline:
+            <select name="airline">
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+                <option value="American">American</option>
+                <option value="Dodo">Dodo Airways</option>
+            </select>
+        </label><br>
+        <label>Departure Terminal:
+            <select name="airport">
+                <option value="AUS">Austin, TX</option>
+                <option value="CMH">Columbus, OH</option>
+                <option value="DEN">Denver, CO</option>
+                <option value="JFK">JFK, New York City, NY</option>
+                <option value="LAX">Los Angeles, CA</option>
+                <option value="LGA">LaGuardia, New York City, NY</option>
+            </select>
+        </label><br>
+        <label>Departure Date & Time:
+            <input name="departs" type="datetime-local">
+            </select>
+        </label><br>
+        <input type="submit" value="Find Flight">
+        </form>
+</body>
+</html>
