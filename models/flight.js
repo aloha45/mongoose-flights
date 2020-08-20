@@ -7,4 +7,5 @@ const flightSchema = {
     flightNo: {type: Number, min: 10, max: 9999, required: true},
     departs: {type: Date, default: new Date(Date.now() + 365*24*60*60*1000), required: true}, 
     }
+
 module.exports = mongoose.model('Flight', flightSchema)

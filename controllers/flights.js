@@ -23,6 +23,14 @@ function create(req, res) {
     })
 }
 
+function createFlight (req, res) {
+    if (!req.body.departs) {
+        redate.setFullYear(redate.getFullYear()+1);
+        req.body.departs = redate
+        return redate
+    }
+}
+
 function index(req, res){
     Flight.find({})
     .then(flights => {
