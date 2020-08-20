@@ -7,3 +7,7 @@ body {
 a {
   color: #07709a;
 }
+
+#show-page div:nth-child(odd) {
+  font-weight: bold;
+}

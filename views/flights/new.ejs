@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'>
-    <title>Mongoose Flights</title>
-</head>
+<%- include('../partials/header') %>
+
 <body>
-    <nav>
-    <a href="/flights/new">New Flight</a> |
-    <a href="/flights">Scheduled Flights</a>
-    </nav>
     <h2>Enter a Flight Search</h2>
         <form action="/flights" method="POST">
         <label>Airline:
@@ -40,5 +30,4 @@
     </label><br>
         <input type="submit" value="Find Flight">
         </form>
-</body>
-</html>
+<%- include('../partials/footer') %>
