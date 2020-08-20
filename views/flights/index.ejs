@@ -13,17 +13,18 @@
         <a href="/flights">Scheduled Flights</a>
         </nav>
   <h1>Flight List</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Airline</th>
-        <th>Airport</th>
-        <th>Flight Number</th>
-        <th>Departure</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% flights.forEach((f) => { %>
+  <li>
+    <table>
+      <thead>
+        <tr>
+          <th>Airline</th>
+          <th>Airport</th>
+          <th>Flight Number</th>
+          <th>Departure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% flights.forEach((f) => { %>
         <tr>
           <td><%= f.airline %></td>
           <td><%= f.airport %></td>
