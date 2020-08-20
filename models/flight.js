@@ -7,7 +7,10 @@ const flightSchema = {
     flightNo: {type: Number, 
         default: parseInt(Math.floor(Math.random()*(9999 - 10) + 10))
         },
-    departs: Date
+    departs: {type: Date, 
+        default: function() {
+            return (Date.now() + 365*24*60*60*1000)
+}}
 }
 
 module.exports = mongoose.model('Flight', flightSchema)
