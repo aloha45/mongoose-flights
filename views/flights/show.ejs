@@ -10,5 +10,18 @@
   <div>Depature Time:</div>
   <div><%= flight.departs %></div>
 </section>
-  
+<br><br><h2>Arrivals</h2>
+<label>Terminal:
+    <select name="airport">
+        <option value="AUS">Austin, TX</option>
+        <option value="CMH">Columbus, OH</option>
+        <option value="DEN">Denver, CO</option>
+        <option value="JFK">JFK, New York City, NY</option>
+        <option value="LAX">Los Angeles, CA</option>
+        <option value="LGA">LaGuardia, New York City, NY</option>
+    </select>
+</label><br>
+<label>Departure Date & Time:
+    <input name="departs" type="datetime-local">
+    <input type="submit" value="Add Terminal">
 <%- include('../partials/footer') %>
