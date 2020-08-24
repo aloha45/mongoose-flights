@@ -6,9 +6,15 @@ module.exports = {
 };
 
 function create(req, res) {
-    Flight.findById(req.params.id, function(err, movie) {
-        flights.destinations.push(req.body);
-        flights.save(function(err) {
+    Flight.findById(req.params.id, function(err, flight) {
+        if (!req.body.departs) {
+            let redate = new Date();
+            redate.setFullYear(redate.getFullYear()+1);
+            req.body.departs = redate
+        }
+        flight.destinations.push(req.body);
+        console.log(flight)
+        flight.save(function(err) {
             res.redirect(`/flights/${flight._id}`);
         });
     });
