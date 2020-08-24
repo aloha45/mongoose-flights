@@ -26,6 +26,10 @@
         <input name="arrival" type="datetime-local">
         <input type="submit" value="Add Terminal">
     </form>
+    <br><br>
+    <td><a href="/tickets/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>
+        GET A TICKET</a></td>
+    <br><br>
     <% if (flight.destinations.length) { %>
         <table>
             <thead>

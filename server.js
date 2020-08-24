@@ -9,7 +9,8 @@ const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index');
 const flightsRouter = require('./routes/flights');
-const destinationsRouter = require('./routes/destinations')
+const destinationsRouter = require('./routes/destinations');
+const ticketsRouter = require('./routes/tickets');
 
 const app = express();
 
