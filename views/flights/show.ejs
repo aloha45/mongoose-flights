@@ -27,7 +27,7 @@
         <input type="submit" value="Add Terminal">
     </form>
     <br><br>
-    <td><a href="/tickets/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>
+    <td><a href="/tickets/<%=flight._id%>/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>
         GET A TICKET</a></td>
     <br><br>
     <% if (flight.destinations.length) { %>
@@ -52,5 +52,26 @@
     <% } else { %>
         <h5>No Connections Yet</h5>
     <% } %>
-
+    <% if (tickets.length) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket Created:</th>
+                    <th>Seat Number:</th>
+                    <th>Price:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% tickets.forEach(function(t) { %>
+                    <tr>
+                        <td><%= t.createdAt.toLocaleDateString() %></td>
+                        <td><%= t.seat %></td>
+                        <td><%= t.price %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <h5>No Connections Yet</h5>
+    <% } %>
         <%- include('../partials/footer') %>
