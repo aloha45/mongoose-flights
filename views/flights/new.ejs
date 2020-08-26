@@ -2,7 +2,45 @@
 
 <body>
     <h2>Enter a Flight Search</h2>
-        <form action="/flights" method="POST">
+        
+    <form action="/flights" method="POST">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Airline:</label>
+          <select class="form-control" id="exampleFormControlSelect1" name="airline">
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+                <option value="American">American</option>
+                <option value="Dodo">Dodo Airways</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Departure Terminal:</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2" name="airport">
+                <option value="AUS">Austin, TX</option>
+                <option value="CMH">Columbus, OH</option>
+                <option value="DEN">Denver, CO</option>
+                <option value="JFK">JFK, New York City, NY</option>
+                <option value="LAX">Los Angeles, CA</option>
+                <option value="LGA">LaGuardia, New York City, NY</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Departure Date and Time:</label>
+            <input name="departs" type="datetime-local" class="form-control" id="exampleInputPassword1">
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Flight Number:</label>
+          <input type="text" class="form-control" name="flightNo" id="exampleFormControlTextarea1" placeholder="1234">
+        </div>
+         <input type="submit" class="btn btn-info">
+      </form>
+    
+    
+    
+    
+    
+    
+    <!-- <form action="/flights" method="POST">
         <label>Airline:
             <select name="airline">
                 <option value="Southwest">Southwest</option>
@@ -30,5 +68,5 @@
     </label><br>
         <input type="submit" value="Find Flight">
         </form>
-        
+         -->
 <%- include('../partials/footer') %>

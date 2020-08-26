@@ -3,11 +3,15 @@
 <p>Buy a ticket.</p>
 
   <form id="add-ticket-form" action="/flights/<%= flight._id %>/tickets" method="POST">
+    <div class="form-control">
     <label>Seat:</label>
     <input type="text" name="seat">
+    </div>
+    <div class="form-control">
     <label>Price:</label>
     <input type="number" name="price">
-    <input type="submit" value="Add Ticket">
+    </div>
+    <input type="submit" class="btn btn-info">
   </form>
   
 

@@ -12,7 +12,7 @@
 </section>
 <br><br>
 <h2>Destinations</h2>
-<form id="add-destination-form" method="POST" action="/flights/<%= flight._id %>/destinations">
+<!-- <form id="add-destination-form" method="POST" action="/flights/---ejs flight._id ejs---/destinations">
     <label>Terminal:</label>
         <select name="airport">
             <option value="AUS">Austin, TX</option>
@@ -21,11 +21,30 @@
             <option value="JFK">JFK, New York City, NY</option>
             <option value="LAX">Los Angeles, CA</option>
             <option value="LGA">LaGuardia, New York City, NY</option>
-        </select>
+        </select><br><br>
     <label>Departure Date & Time:</label>
         <input name="arrival" type="datetime-local">
         <input type="submit" value="Add Terminal">
-    </form>
+    </form> -->
+
+    <form id="add-destination-form" method="POST" action="/flights/<%= flight._id %>/destinations">
+        <div class="form-group">
+          <label>Terminal:</label>
+          <select name="airport" class="form-control" id="exampleFormControlSelect1">
+            <option value="AUS">Austin, TX</option>
+            <option value="CMH">Columbus, OH</option>
+            <option value="DEN">Denver, CO</option>
+            <option value="JFK">JFK, New York City, NY</option>
+            <option value="LAX">Los Angeles, CA</option>
+            <option value="LGA">LaGuardia, New York City, NY</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Departure Date and Time:</label>
+          <input name="arrival" type="datetime-local" class="form-control" id="exampleInputPassword1">
+        </div>
+        <input type="submit" value="Add Terminal" class="btn btn-info">
+      </form>
     <br><br>
     <td><a href="/tickets/<%=flight._id%>/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>
         GET A TICKET</a></td>
@@ -34,7 +53,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Ticket Created:</th>
+                    <th>Flight Created:</th>
                     <th>Destination:</th>
                     <th>Arrival:</th>
                 </tr>
@@ -72,6 +91,6 @@
             </tbody>
         </table>
     <% } else { %>
-        <h5>No Connections Yet</h5>
+        <h5>No Tickets Yet</h5>
     <% } %>
         <%- include('../partials/footer') %>

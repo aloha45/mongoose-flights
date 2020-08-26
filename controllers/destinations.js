@@ -7,10 +7,10 @@ module.exports = {
 
 function create(req, res) {
     Flight.findById(req.params.id, function(err, flight) {
-        if (!req.body.departs) {
+        if (!req.body.arrival) {
             let redate = new Date();
             redate.setFullYear(redate.getFullYear()+1);
-            req.body.departs = redate
+            req.body.arrival = redate
         }
         flight.destinations.push(req.body);
         console.log(flight)
